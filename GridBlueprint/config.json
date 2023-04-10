@@ -10,24 +10,16 @@
   "layers": [
     {
       "name": "GridLayer",
-      "file": "Resources/grid_closed.csv",
+      "file": "Resources/grid_10x10_ant.csv",
       "pythonVisualization": true
     }
   ],
   "agents": [
     {
-      "name": "SimpleAgent",
+      "name": "AntAgent",
       "count": 1,
-      "file": "Resources/simple_agent.csv"
-    },
-    {
-      "name": "ComplexAgent",
-      "count": 1,
-      "file": "Resources/complex_agent.csv"
-    },
-    {
-      "name": "HelperAgent",
-      "count": 1
+      "file" : "Resources/ant_agent.csv"
     }
+    
   ]
 }
