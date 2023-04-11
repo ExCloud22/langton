@@ -26,18 +26,15 @@ public class AntAgent : IAgent<GridLayer>, IPositionable
 
     public void Tick()
     {
-        while(true)
+        // 0 == at white square; 1 == at black square
+        if (_layer[Position] == 0)
         {
-            // 0 == at white square; 1 == at black square
-            if (_layer[Position] == 0)
-            {
-                Console.WriteLine("layer = 0");
-                TurnClockwise();
-            } else if (_layer[Position] == 1)
-            {
-                Console.WriteLine("layer = 1");
-                TurnCounterClockwise();
-            }
+            Console.WriteLine("layer = 0");
+            TurnClockwise();
+        } else if (_layer[Position] == 1)
+        {
+            Console.WriteLine("layer = 1");
+            TurnCounterClockwise();
         }
         
     }
@@ -48,7 +45,8 @@ public class AntAgent : IAgent<GridLayer>, IPositionable
     private void TurnClockwise()
     {
         _layer[Position] = 1;
-        _currentDirection = _directions[(_dir + 1) % 4];
+        _dir = _dir + 1;
+        _currentDirection = _directions[(_dir) % 4];
         MakeAStep(_currentDirection);
     }
     
@@ -58,7 +56,8 @@ public class AntAgent : IAgent<GridLayer>, IPositionable
     private void TurnCounterClockwise()
     {
         _layer[Position] = 0;
-        _currentDirection = _directions[(_dir + 3) % 4];
+        _dir = _dir + 3;
+        _currentDirection = _directions[(_dir) % 4];
         MakeAStep(_currentDirection);
     }
 

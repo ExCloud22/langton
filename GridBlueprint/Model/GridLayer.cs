@@ -32,9 +32,9 @@ public class GridLayer : RasterLayer
         var agentManager = layerInitData.Container.Resolve<IAgentManager>();
         
         AntAgents = agentManager.Spawn<AntAgent, GridLayer>().ToList();
-        SimpleAgents = agentManager.Spawn<SimpleAgent, GridLayer>().ToList();
-        ComplexAgents = agentManager.Spawn<ComplexAgent, GridLayer>().ToList();
-        HelperAgents = agentManager.Spawn<HelperAgent, GridLayer>().ToList();
+        //SimpleAgents = agentManager.Spawn<SimpleAgent, GridLayer>().ToList();
+        //ComplexAgents = agentManager.Spawn<ComplexAgent, GridLayer>().ToList();
+        //HelperAgents = agentManager.Spawn<HelperAgent, GridLayer>().ToList();
         
 
         return initLayer;
@@ -50,7 +50,7 @@ public class GridLayer : RasterLayer
     /// <param name="x">x-coordinate of grid cell</param>
     /// <param name="y">y-coordinate of grid cell</param>
     /// <returns>Boolean representing if (x,y) is accessible</returns>
-    public override bool IsRoutable(int x, int y) => this[x, y] == 0;
+    public override bool IsRoutable(int x, int y) => (this[x, y] == 0 || this[x, y] == 1);
 
     #endregion
 

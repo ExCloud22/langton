@@ -1,9 +1,9 @@
 {
   "globals": {
     "startTime": "2022-03-01T05:00",
-    "endTime": "2022-03-01T05:10",
+    "endTime": "2022-03-01T15:00",
     "deltaTUnit": "seconds",
-    "deltaT": 1,
+    "deltaT": 5,
     "output": "csv",
     "pythonVisualization": true
   },

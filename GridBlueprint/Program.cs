@@ -14,9 +14,9 @@ internal static class Program
         var description = new ModelDescription();
         description.AddLayer<GridLayer>();
         description.AddAgent<AntAgent, GridLayer>();
-        description.AddAgent<SimpleAgent, GridLayer>();
-        description.AddAgent<ComplexAgent, GridLayer>();
-        description.AddAgent<HelperAgent, GridLayer>();
+        //description.AddAgent<SimpleAgent, GridLayer>();
+        //description.AddAgent<ComplexAgent, GridLayer>();
+        //description.AddAgent<HelperAgent, GridLayer>();
 
         // Load the simulation configuration from a JSON configuration file
         var file = File.ReadAllText("config.json");
