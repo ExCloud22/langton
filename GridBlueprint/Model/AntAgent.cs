@@ -29,11 +29,9 @@ public class AntAgent : IAgent<GridLayer>, IPositionable
         // 1 == at white square; 0 == at black square
         if (_layer[Position] == 1)
         {
-            Console.WriteLine("layer = 1");
             TurnClockwise();
         } else if (_layer[Position] == 0)
         {
-            Console.WriteLine("layer = 0");
             TurnCounterClockwise();
         }
         

@@ -1,16 +1,13 @@
 {
   "globals": {
-    "startTime": "2022-03-01T05:00",
-    "endTime": "2022-03-01T15:00",
-    "deltaTUnit": "seconds",
-    "deltaT": 5,
+    "steps": 100000,
     "output": "csv",
     "pythonVisualization": true
   },
   "layers": [
     {
       "name": "GridLayer",
-      "file": "Resources/grid_10x10_ant.csv",
+      "file": "Resources/grid_100x100_ant_black.csv",
       "pythonVisualization": true
     }
   ],
